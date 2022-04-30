@@ -53,6 +53,21 @@ import { InformationComponent } from './pages/user/information/information.compo
 import { ShowfeesComponent } from './pages/user/showfees/showfees.component';
 import { SideComponent } from './pages/user/side/side.component';
 import { RoomComponent } from './pages/user/room/room.component';
+import {MatTabsModule} from '@angular/material/tabs';
+import { NewRequestComponent } from './pages/user/laundry/new-request/new-request.component';
+import { PendingRequestComponent } from './pages/user/laundry/pending-request/pending-request.component';
+import { AcceptedRequestComponent } from './pages/user/laundry/accepted-request/accepted-request.component';
+import { RejectedRequestComponent } from './pages/user/laundry/rejected-request/rejected-request.component';
+import { CompletedRequestComponent } from './pages/user/laundry/completed-request/completed-request.component';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatTableModule} from '@angular/material/table';
+import { UpdateRequestComponent } from './pages/user/laundry/update-request/update-request.component';
+import { AcceptedAdminRequestComponent } from './pages/admin/accepted-admin-request/accepted-admin-request.component';
+import { CompletedAdminRequestComponent } from './pages/admin/completed-admin-request/completed-admin-request.component';
+import { PendingAdminRequestComponent } from './pages/admin/pending-admin-request/pending-admin-request.component';
+import { RejectedAdminRequestComponent } from './pages/admin/rejected-admin-request/rejected-admin-request.component';
+import { UpdateAdminRequestComponent } from './pages/admin/update-admin-request/update-admin-request.component';
+import { SetLaundryPricesComponent } from './pages/admin/set-laundry-prices/set-laundry-prices.component';
 
 @NgModule({
   declarations: [
@@ -92,7 +107,19 @@ import { RoomComponent } from './pages/user/room/room.component';
     InformationComponent,
     ShowfeesComponent,
     SideComponent,
-    RoomComponent
+    RoomComponent,
+    NewRequestComponent,
+    PendingRequestComponent,
+    AcceptedRequestComponent,
+    RejectedRequestComponent,
+    CompletedRequestComponent,
+    UpdateRequestComponent,
+    AcceptedAdminRequestComponent,
+    CompletedAdminRequestComponent,
+    PendingAdminRequestComponent,
+    RejectedAdminRequestComponent,
+    UpdateAdminRequestComponent,
+    SetLaundryPricesComponent,
   ],
   imports: [
     BrowserModule,
@@ -108,7 +135,10 @@ import { RoomComponent } from './pages/user/room/room.component';
     HttpClientModule,
     MatProgressSpinnerModule,
     MatCardModule,
-    MatListModule
+    MatListModule,
+    MatTabsModule,
+    MatRadioModule,
+    MatTableModule
   ],
   providers: [MatSnackBar,EmailService,authInterceptorProviders],
   bootstrap: [AppComponent]
