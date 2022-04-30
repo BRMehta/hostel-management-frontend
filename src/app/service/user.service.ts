@@ -119,6 +119,15 @@ public  isoccupied(id:number)
   {
     return this.http.get(`${baseUrl}/user/ROOMDETAILS/${stud_id}`)
   }
+  //get email id based on student id
+  public getEmailIdByStudId(id:number){
+    const headers = new HttpHeaders().set('Content-Type', 'text/plain; charset=utf-8');
+    const requestOptions: Object = {
+      headers: headers,
+      responseType: 'text'
+    }
+    return this.http.get<any>(`${baseUrl}/user/get-email-address/${id}`,requestOptions)
+  }
 
 }
 
