@@ -11,8 +11,11 @@
               <input name="ID" [(ngModel)]="data.stud_id" matInput>
           </mat-form-field>
 
+          &NonBreakingSpace;
+
           <div class="text-center">
-                <button  type="submit" mat-raised-button color="primary">submit</button>
+                <button  type="submit" mat-raised-button color="primary">GetInfo</button>
+                &NonBreakingSpace;
                 <button type="reset" mat-raised-button color="accent">Reset</button>
             </div>
         </form>
@@ -24,4 +27,23 @@
  </form>
 
 
- <div class="row">{{data.room_id}}</div> 
+ <div class="container  ml20 mr20 mb20 mt20" *ngIf="flag"style="overflow-x:auto;">
+  <table>
+    <thead>
+    <tr>
+      <th>Student_id</th>
+      <th>Room_id</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr >
+      <td><span>{{data.stud_id}}</span></td>
+    
+      <td><span>{{data.room_id}}</span></td>
+    </tr>
+    </tbody>
+
+    
+
+  </table>
+  </div>

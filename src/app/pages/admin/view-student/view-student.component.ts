@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 
 export class ViewStudentComponent implements OnInit
  {
+   
 
   data=
   {
@@ -30,24 +31,24 @@ export class ViewStudentComponent implements OnInit
   {
     
   }
- // flag:boolean=false;
+  flag:boolean=false;
   x=[];
   doSubmitForm()
   {
 
-    ////this.flag=true;
+    this.flag=true;
     this.student.viewUser(this.data.userName).subscribe((response: any) => 
     {
-      //this.flag=false;
+     // this.flag=false;
       this.data= response;
       console.log(this.data);
-      Swal.fire('Success !!',this.data.id + this.data.email, 'success');
+      Swal.fire('Success !!','Data inputted correctly' ,'success');
 
     },
 
     (error) => 
     {
-      //this.flag=false;
+      this.flag=false;
       console.log(error);
       Swal.fire('Error !!', 'Error in loading data', 'error');
     });

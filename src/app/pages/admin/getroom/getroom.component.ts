@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 export class GetroomComponent implements OnInit 
 {
   
+  flag:boolean=false;
   data=
   {
     stud_id:0,
@@ -24,12 +25,12 @@ export class GetroomComponent implements OnInit
   doSubmitForm()
   {
 
-    ////this.flag=true;
+    this.flag=true;
     this.student.getroombystudid(this.data.stud_id).subscribe((response: any) => 
     {
-     this.data=response ;
-     console.log(this.data);
-     Swal.fire('Success', this.data.room_id+" ", 'error');
+     this.data.room_id=response ;
+     console.log(this.data.room_id);
+     Swal.fire('Success', this.data.room_id+" ", 'success');
     },
 
     (error: any) => 

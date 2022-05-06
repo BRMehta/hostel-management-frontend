@@ -31,6 +31,7 @@ doSubmitForm()
    (response: any) => 
    {
 
+     Swal.fire('Success!','Data updated' ,'success');
      console.log(response)
 
    },

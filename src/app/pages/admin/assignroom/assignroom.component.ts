@@ -33,8 +33,10 @@ doSubmitForm()
 
       this.data = response;
       console.log(response)
-
-    },
+      Swal.fire('Success !','Room alloted', 'success');
+    }
+,
+    
     (error:any) => 
     {
       console.log(error);

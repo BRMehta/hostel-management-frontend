@@ -1,18 +1,15 @@
-<!-- <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-        <mat-icon>menu</mat-icon>
-      </button>
-    <span>Send Notices to Students using email</span>
-</mat-toolbar> -->
-<mat-toolbar color="accent">
-  <!--anchor tag causes reload so use routerLink of angular-->
-  <a routerLink="/" mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-   <mat-icon>home</mat-icon>
-  </a>
- <span>Hostel Portal</span>
+
+<mat-toolbar color="primary">
+<br>
+<br>
+<mat-icon aria-hidden="false" aria-label="Example home icon">gite</mat-icon>
+&NonBreakingSpace;
+&NonBreakingSpace;
+&NonBreakingSpace;
+
+ <span>HOSTEL  PORTAL</span>
  <span class="example-spacer"></span>
- <!-- if you don't use single quote insode double quote then it is variable, "'/login'"-->
- <!-- use [] for angular expression -->
+
  <a
 *ngIf="!isLoggedIn" 
  [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">

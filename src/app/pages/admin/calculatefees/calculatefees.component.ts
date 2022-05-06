@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 export class CalculatefeesComponent implements OnInit 
 
 {
+  flag:boolean=false;
   data=
   {
     id:0,
@@ -32,7 +33,7 @@ export class CalculatefeesComponent implements OnInit
   doSubmitForm()
   {
 
-    ////this.flag=true;
+    this.flag=true;
     this.student.calculate(this.data.id).subscribe((response: any) => 
     {
       this.fdata=response;
@@ -44,13 +45,14 @@ export class CalculatefeesComponent implements OnInit
     (error: any) => 
     {
       console.log(error);
-      Swal.fire('Error !!', 'Error', 'error');
+      Swal.fire('Error !!', 'Does not exist in Database', 'error');
     });
   }
 
 
   doExportpdf()
   {
+    this.flag=true
     this.student.Exportpdf(this.data.id).subscribe(
       (data: any) => 
       {

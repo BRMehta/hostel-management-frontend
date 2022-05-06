@@ -31,7 +31,11 @@ export class DeleteStudentComponent implements OnInit
     ////this.flag=true;
     this.student.deleteUser(this.data.id).subscribe((response: any) => 
     {
-      Swal.fire('Success !!', 'success');
+      Swal.fire(
+        'Deleted',
+        'You clicked the button!',
+        'success'
+      )
 
     },
 

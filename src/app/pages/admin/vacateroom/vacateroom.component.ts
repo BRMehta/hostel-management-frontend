@@ -25,13 +25,13 @@ export class VacateroomComponent implements OnInit {
 
     this.student.vacateroom(this.id).subscribe((response: any) => 
     {
-      Swal.fire('Success !!', 'success');
+      Swal.fire('Success !!','Room with inputted user id vacated', 'success');
     },
 
     (error: any) => 
     {
       console.log(error);
-      Swal.fire('Error !!', 'Error invacating', 'error');
+      Swal.fire('Error !!', 'User has no room alloted', 'error');
     });
   }
 

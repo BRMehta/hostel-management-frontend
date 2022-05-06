@@ -1,8 +1,32 @@
 
 
- <h1>ID:     {{fdata.id }}</h1>
- <h1>MESS FEE PAYABLE:       {{fdata.mess_fees }}</h1>
- <h1>HOSTEL FEE PAYABLE:   {{fdata.hostel_fees }}</h1>
+ <div class="container" style="overflow-x:auto;">
+  <table>
+    <thead>
+    <tr>
+      <th>StudentId</th>
+      <th>Mess Fees</th>
+      <th>Hostel Fees</th>
+    
+    </tr>
+    </thead>
+    <tbody>
+      <td><span>{{fdata['id']}}</span></td>
+      <td><span>{{fdata['mess_fees']}}</span></td>
+      <td><span>{{fdata['hostel_fees']}}</span></td>
+     
+    </tbody>
+  </table>
+  </div>
+  &NonBreakingSpace;
+  &NonBreakingSpace;
+  &NonBreakingSpace;
+ 
+
+
+
+
+
 
 <form (ngSubmit)="doExportpdf()">
   <div class="text-center">

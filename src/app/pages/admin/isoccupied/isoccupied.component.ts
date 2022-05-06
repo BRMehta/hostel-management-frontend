@@ -23,13 +23,17 @@ export class IsoccupiedComponent implements OnInit {
   ngOnInit(): void 
   {}
 
+  res=" Available"
   doSubmitForm()
   {
 
     this.student.isoccupied(this.data.id).subscribe((response: any) => 
     {
       this.data.x=response;
-      Swal.fire('Success !!', 'success');
+      if(this.data.x)
+      this.res="Not Available"
+    
+      Swal.fire('Success !!',this.res, 'success');
 
     },
 
@@ -37,7 +41,7 @@ export class IsoccupiedComponent implements OnInit {
     {
       //this.flag=false;
       console.log(error);
-      Swal.fire('Error !!', 'Error in loading data', 'error');
+      Swal.fire('Error !!', 'Room not yet Initailized,please initialize room ', 'error');
     });
   }
 

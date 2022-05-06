@@ -1,4 +1,24 @@
 
- <h1>ROOM ID:     {{fdata.room }}</h1>
- <h1>START:       {{fdata.start }}</h1>
- <h1>END:         {{fdata.end }}</h1>
+
+
+ <div class="container" style="overflow-x:auto;">
+    <table>
+      <thead>
+      <tr>
+        <th>Room Id</th>
+        <th>Start date</th>
+        <th>End date</th>
+      
+      </tr>
+      </thead>
+      <tbody>
+        <td><span>{{fdata['room']}}</span></td>
+        <td><span>{{fdata['start']}}</span></td>
+        <td><span>{{fdata['end']}}</span></td>
+       
+      </tbody>
+    </table>
+    </div>
+    &NonBreakingSpace;
+    &NonBreakingSpace;
+    &NonBreakingSpace;
