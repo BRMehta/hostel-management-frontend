@@ -46,12 +46,74 @@ import { InformationComponent } from './pages/user/information/information.compo
 import { ShowfeesComponent } from './pages/user/showfees/showfees.component';
 import { RoomComponent } from './pages/user/room/room.component';
 
+import {SportshomeComponent} from "./pages/sportshome/sportshome.component";
+import {SportudashComponent} from "./pages/sportudash/sportudash.component";
+import {SportsheaderComponent} from "./pages/sportsheader/sportsheader.component";
+import {SportsidenavComponent} from "./pages/sportsidenav/sportsidenav.component";
+import {SportuformComponent} from "./pages/sportuform/sportuform.component";
+import {SportgrantComponent} from "./pages/sportgrant/sportgrant.component";
+import {SportadashboardComponent} from "./pages/sportadashboard/sportadashboard.component";
+import {AddeqformComponent} from "./pages/addeqform/addeqform.component";
+import {SportequpdateComponent} from "./pages/sportequpdate/sportequpdate.component";
+import {ReqgranttabComponent} from "./pages/reqgranttab/reqgranttab.component";
+
+
 
 //Array
 const routes: Routes = [
   {
     path:"",
     component:HomeComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"sportshome",
+    component:SportshomeComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"sportudash",
+    component:SportudashComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"sportsheader",
+    component:SportsheaderComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"sportadashboard",
+    component:SportadashboardComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"addeqform",
+    component:AddeqformComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"sportequpdate",
+    component:SportequpdateComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"reqgranttab",
+    component:ReqgranttabComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"sportgrant",
+    component:SportgrantComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"sportuform",
+    component:SportuformComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"sportssidenav",
+    component:SportsidenavComponent,
     pathMatch:"full"
   },
   {

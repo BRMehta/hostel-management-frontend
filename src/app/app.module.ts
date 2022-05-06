@@ -9,6 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatSnackBar, MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { EmailComponent } from './components/email/email.component';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -69,6 +70,18 @@ import { RejectedAdminRequestComponent } from './pages/admin/rejected-admin-requ
 import { UpdateAdminRequestComponent } from './pages/admin/update-admin-request/update-admin-request.component';
 import { SetLaundryPricesComponent } from './pages/admin/set-laundry-prices/set-laundry-prices.component';
 
+import { SportudashComponent } from './pages/sportudash/sportudash.component';
+import { SportsidenavComponent } from './pages/sportsidenav/sportsidenav.component';
+import { SportshomeComponent } from './pages/sportshome/sportshome.component';
+import { SportsheaderComponent } from './pages/sportsheader/sportsheader.component';
+import { SportuformComponent } from './pages/sportuform/sportuform.component';
+import { SportgrantComponent } from './pages/sportgrant/sportgrant.component';
+import { SportadashboardComponent } from './pages/sportadashboard/sportadashboard.component';
+import { AddeqformComponent } from './pages/addeqform/addeqform.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { SportequpdateComponent } from './pages/sportequpdate/sportequpdate.component';
+import { ReqgranttabComponent } from './pages/reqgranttab/reqgranttab.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -120,6 +133,16 @@ import { SetLaundryPricesComponent } from './pages/admin/set-laundry-prices/set-
     RejectedAdminRequestComponent,
     UpdateAdminRequestComponent,
     SetLaundryPricesComponent,
+    SportudashComponent,
+    SportsidenavComponent,
+    SportshomeComponent,
+    SportsheaderComponent,
+    SportuformComponent,
+    SportgrantComponent,
+    SportadashboardComponent,
+    AddeqformComponent,
+    SportequpdateComponent,
+    ReqgranttabComponent
   ],
   imports: [
     BrowserModule,
@@ -138,7 +161,9 @@ import { SetLaundryPricesComponent } from './pages/admin/set-laundry-prices/set-
     MatListModule,
     MatTabsModule,
     MatRadioModule,
-    MatTableModule
+    MatTableModule,
+    MatSidenavModule,
+    MatDialogModule
   ],
   providers: [MatSnackBar,EmailService,authInterceptorProviders],
   bootstrap: [AppComponent]
