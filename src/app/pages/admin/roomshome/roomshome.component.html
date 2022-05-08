@@ -1,0 +1,103 @@
+<div class="bootstrap-wrapper mt20">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <mat-card class="outer_card">
+                    <h2 class="text-center"> Rooms Management Dashboard</h2>
+                    <!-- <div class="col-md-4">
+            <app-sidebar></app-sidebar>
+          </div> -->
+                    <div class="column">
+                        <mat-card class="example-card" (click)="countRooms()">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"></div>
+                                <mat-card-title>Count Rooms</mat-card-title>
+                                <mat-card-subtitle>Module</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-actions>
+                                <button class="ml10" mat-raised-button>LIKE</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                    <div class="column">
+                        <mat-card class="example-card" (click)="countFreerooms()">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"></div>
+                                <mat-card-title>Count_Free_Rooms</mat-card-title>
+                                <mat-card-subtitle>Module</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-actions>
+                                <button class="ml10" mat-raised-button>LIKE</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                    <div class="column">
+                        <mat-card class="example-card" routerLink="/assignroom">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"></div>
+                                <mat-card-title>Assign Room</mat-card-title>
+                                <mat-card-subtitle>Module</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-actions>
+                                <button class="ml10" mat-raised-button>LIKE</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                    <div class="column">
+                        <mat-card class="example-card" routerLink="/getroom">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"></div>
+                                <mat-card-title>Get Room</mat-card-title>
+                                <mat-card-subtitle>Module</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-actions>
+                                <button class="ml10" mat-raised-button>LIKE</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                    <div class="column mt20" style="margin-left: 13%">
+                        <mat-card class="example-card" routerLink="/initializeroom">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"></div>
+                                <mat-card-title>Room Creation</mat-card-title>
+                                <mat-card-subtitle>Module</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-actions>
+                                <button class="ml10" mat-raised-button>LIKE</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                    <div class="column mt20">
+                        <mat-card class="example-card" routerLink="/vacateroom">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"></div>
+                                <mat-card-title>Vacate Room</mat-card-title>
+                                <mat-card-subtitle>Module</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-actions>
+                                <button class="ml10" mat-raised-button>LIKE</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+                    <div class="column mt20">
+                        <mat-card class="example-card" routerLink="/isoccupied">
+                            <mat-card-header>
+                                <div mat-card-avatar class="example-header-image"></div>
+                                <mat-card-title>Check_Occupancy</mat-card-title>
+                                <mat-card-subtitle>Module</mat-card-subtitle>
+                            </mat-card-header>
+                            <mat-card-actions>
+                                <button class="ml10" mat-raised-button>LIKE</button>
+                            </mat-card-actions>
+                        </mat-card>
+                    </div>
+
+                    <!-- <div class="col-md-8">
+            <router-outlet></router-outlet>
+          </div> -->
+
+                </mat-card>
+            </div>
+        </div>
+    </div>
+</div>

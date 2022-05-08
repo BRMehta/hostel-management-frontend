@@ -14,7 +14,7 @@
 
   .outer_card{
     min-height: 110%;
-    background-color: rgb(215, 213, 213);
+    background-color: #eca899;
     justify-content: center;
     align-items: center;
   }

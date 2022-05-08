@@ -2,6 +2,7 @@
     max-width: 200px;
     max-height: 200px;
     transform: translateY(0);
+    text-align: center;
   }
   
   .example-header-image {
@@ -14,7 +15,7 @@
   }
 
   .outer_card{
-    min-height: 125%;
+    min-height: 150%;
     background-color: rgb(215, 213, 213);
   }
 
@@ -32,4 +33,9 @@
     margin: 0 -5px;
     min-height: 300px;
     width: auto;
+  }
+
+  .mat-card-title
+  {
+    justify-content: center;
   }

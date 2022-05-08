@@ -57,6 +57,8 @@ import { LaundryhomeComponent } from './pages/admin/laundryhome/laundryhome.comp
 import { StudentinfoComponent } from './pages/admin/studentinfo/studentinfo.component';
 import { LaundryUserHomeComponent } from './pages/user/laundry/laundry-user-home/laundry-user-home.component';
 import { SportsUserHomeComponent } from './pages/user/sports-user-home/sports-user-home.component';
+import { BillinghomeComponent } from './pages/admin/billinghome/billinghome.component';
+import { RoomshomeComponent } from './pages/admin/roomshome/roomshome.component';
 
 //Array
 const routes: Routes = [
@@ -103,6 +105,36 @@ const routes: Routes = [
   {
     path:'update-admin',
     component:UpdateAdminRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'new-request',
+    component:NewRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'pending-request',
+    component:PendingRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'accepted-request',
+    component:AcceptedRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'rejected-request',
+    component:RejectedRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'completed-request',
+    component:CompletedRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'update',
+    component:UpdateRequestComponent,
     pathMatch:"full"
   },
   {
@@ -181,35 +213,105 @@ const routes: Routes = [
     pathMatch:"full"
   },
   {
-    path:'new-request',
-    component:NewRequestComponent,
+    path: 'add-student',
+    component: AddStudentComponent,
     pathMatch:"full"
   },
   {
-    path:'pending-request',
-    component:PendingRequestComponent,
+    path: 'view-student',
+    component: ViewStudentComponent,
     pathMatch:"full"
   },
   {
-    path:'accepted-request',
-    component:AcceptedRequestComponent,
+    path: 'delete-student',
+    component: DeleteStudentComponent,
     pathMatch:"full"
   },
   {
-    path:'rejected-request',
-    component:RejectedRequestComponent,
+    path:'view-all-student',
+    component:ViewAllStudentComponent,
     pathMatch:"full"
   },
   {
-    path:'completed-request',
-    component:CompletedRequestComponent,
+    path:'showfees',
+    component:ShowfeesComponent,
     pathMatch:"full"
   },
   {
-    path:'update',
-    component:UpdateRequestComponent,
+    path:'room',
+    component:RoomComponent,
     pathMatch:"full"
   },
+  {
+    path:'information',
+    component:InformationComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'billinghome',
+    component:BillinghomeComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'viewfees',
+    component:ViewfeesComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'setfees',
+    component:SetfeesComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'updatefees',
+    component:UpdatefeesComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'calculatefees',
+    component:CalculatefeesComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'roomshome',
+    component:RoomshomeComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'countofrooms',
+    component:CountofroomsComponent,
+    pathMatch:"full"
+    },
+    {
+      path:'countoffreerooms',
+      component:CountoffreeroomsComponent,
+      pathMatch:"full"
+    },
+    {
+      path:'assignroom',
+      component:AssignroomComponent,
+      pathMatch:"full"
+    },
+    {
+      path:'getroom',
+      component:GetroomComponent,
+      pathMatch:"full"
+    },
+    {
+      path:'initializeroom',
+      component:InitializeroomComponent,
+      pathMatch:"full"
+    },
+    {
+      path:'vacateroom',
+      component:VacateroomComponent,
+      pathMatch:"full"
+    },
+    {
+      path:'isoccupied',
+      component:IsoccupiedComponent,
+      pathMatch:"full"
+    },
   {
     path:"user-dashboard",
     component:UserDashboardComponent,
@@ -222,20 +324,7 @@ const routes: Routes = [
       {
         path: 'welcome',
         component:  welcomeComponent,
-      },
-      {
-        path:'information',
-        component:InformationComponent,
-      },
-      {
-        path:'showfees',
-        component:ShowfeesComponent,
-      },
-      {
-        path:'room',
-        component:RoomComponent,
-      },
-      
+      },      
     ]
   },
     {
@@ -243,10 +332,6 @@ const routes: Routes = [
       component:DashboardComponent,
       canActivate: [AdminGuard],
     children: [
-    {
-        path:'set-laundry-prices',
-        component:SetLaundryPricesComponent
-      },
       {
         path: '',
         component: WelcomeComponent,
@@ -255,84 +340,14 @@ const routes: Routes = [
         path: 'welcome',
         component: WelcomeComponent,
       },
-      {
-        path: 'add-student',
-        component: AddStudentComponent,
-      },
-      {
-        path: 'view-student',
-        component: ViewStudentComponent,
-      },
-      {
-        path: 'delete-student',
-        component: DeleteStudentComponent,
-      },
-      {
-        path:'view-all-student',
-        component:ViewAllStudentComponent,
-      },
         {
           path:'rooms',
           component:RoomsComponent,
           children:
           [
-            {
-            path:'countofrooms',
-            component:CountofroomsComponent,
-            },
-            {
-              path:'countoffreerooms',
-              component:CountoffreeroomsComponent,
-            },
-            {
-              path:'assignroom',
-              component:AssignroomComponent,
-            },
-            {
-              path:'getroom',
-              component:GetroomComponent,
-            },
-            {
-              path:'initializeroom',
-              component:InitializeroomComponent,
-            },
-            {
-              path:'updateroom',
-              component:UpdateroomComponent,
-            },
-            {
-              path:'vacateroom',
-              component:VacateroomComponent,
-            },
-            {
-              path:'isoccupied',
-              component:IsoccupiedComponent,
-            },
+           
           ]
         },
-      {
-        path:'fees',
-        component:FeesComponent,
-        children:
-        [
-          {
-            path:'viewfees',
-            component:ViewfeesComponent,
-          },
-          {
-            path:'setfees',
-            component:SetfeesComponent,
-          },
-          {
-            path:'updatefees',
-            component:UpdatefeesComponent,
-          },
-          {
-            path:'calculatefees',
-            component:CalculatefeesComponent,
-          }
-        ]
-      }
     ]
   },
 ];

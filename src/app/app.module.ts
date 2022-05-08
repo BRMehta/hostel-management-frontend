@@ -85,6 +85,8 @@ import { LaundryhomeComponent } from './pages/admin/laundryhome/laundryhome.comp
 import { StudentinfoComponent } from './pages/admin/studentinfo/studentinfo.component';
 import { LaundryUserHomeComponent } from './pages/user/laundry/laundry-user-home/laundry-user-home.component';
 import { SportsUserHomeComponent } from './pages/user/sports-user-home/sports-user-home.component';
+import { BillinghomeComponent } from './pages/admin/billinghome/billinghome.component';
+import { RoomshomeComponent } from './pages/admin/roomshome/roomshome.component';
 
 @NgModule({
   declarations: [
@@ -150,7 +152,9 @@ import { SportsUserHomeComponent } from './pages/user/sports-user-home/sports-us
     LaundryhomeComponent,
     StudentinfoComponent,
     LaundryUserHomeComponent,
-    SportsUserHomeComponent
+    SportsUserHomeComponent,
+    BillinghomeComponent,
+    RoomshomeComponent
   ],
   imports: [
     BrowserModule,
