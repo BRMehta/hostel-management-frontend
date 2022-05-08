@@ -34,18 +34,15 @@ import { CalculatefeesComponent } from './pages/admin/calculatefees/calculatefee
 import { CountofroomsComponent } from './pages/admin/countofrooms/countofrooms.component';
 import { CountoffreeroomsComponent } from './pages/admin/countoffreerooms/countoffreerooms.component';
 import { AssignroomComponent } from './pages/admin/assignroom/assignroom.component';
-
 import { InitializeroomComponent } from './pages/admin/initializeroom/initializeroom.component';
 import { UpdateroomComponent } from './pages/admin/updateroom/updateroom.component';
 import { VacateroomComponent } from './pages/admin/vacateroom/vacateroom.component';
 import { IsoccupiedComponent } from './pages/admin/isoccupied/isoccupied.component';
 import { GetroomComponent } from './pages/admin/getroom/getroom.component';
-
 import { welcomeComponent } from 'src/app/pages/user/welcome/welcome.component';
 import { InformationComponent } from './pages/user/information/information.component';
 import { ShowfeesComponent } from './pages/user/showfees/showfees.component';
 import { RoomComponent } from './pages/user/room/room.component';
-
 import {SportshomeComponent} from "./pages/sportshome/sportshome.component";
 import {SportudashComponent} from "./pages/sportudash/sportudash.component";
 import {SportsheaderComponent} from "./pages/sportsheader/sportsheader.component";
@@ -56,8 +53,10 @@ import {SportadashboardComponent} from "./pages/sportadashboard/sportadashboard.
 import {AddeqformComponent} from "./pages/addeqform/addeqform.component";
 import {SportequpdateComponent} from "./pages/sportequpdate/sportequpdate.component";
 import {ReqgranttabComponent} from "./pages/reqgranttab/reqgranttab.component";
-
-
+import { LaundryhomeComponent } from './pages/admin/laundryhome/laundryhome.component';
+import { StudentinfoComponent } from './pages/admin/studentinfo/studentinfo.component';
+import { LaundryUserHomeComponent } from './pages/user/laundry/laundry-user-home/laundry-user-home.component';
+import { SportsUserHomeComponent } from './pages/user/sports-user-home/sports-user-home.component';
 
 //Array
 const routes: Routes = [
@@ -67,8 +66,58 @@ const routes: Routes = [
     pathMatch:"full"
   },
   {
+    path:"laundryhome",
+    component:LaundryhomeComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"laundryUserHome",
+    component:LaundryUserHomeComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'set-laundry-prices',
+    component:SetLaundryPricesComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'pending-admin-request',
+    component:PendingAdminRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'accepted-admin-request',
+    component:AcceptedAdminRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'rejected-admin-request',
+    component:RejectedAdminRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'completed-admin-request',
+    component:CompletedAdminRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'update-admin',
+    component:UpdateAdminRequestComponent,
+    pathMatch:"full"
+  },
+  {
     path:"sportshome",
     component:SportshomeComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"sportsUserHome",
+    component:SportsUserHomeComponent,
+    pathMatch:"full"
+  },
+  {
+    path:"studentinfo",
+    component:StudentinfoComponent,
     pathMatch:"full"
   },
   {
@@ -131,14 +180,41 @@ const routes: Routes = [
     component:EmailComponent,
     pathMatch:"full"
   },
-
-
+  {
+    path:'new-request',
+    component:NewRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'pending-request',
+    component:PendingRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'accepted-request',
+    component:AcceptedRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'rejected-request',
+    component:RejectedRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'completed-request',
+    component:CompletedRequestComponent,
+    pathMatch:"full"
+  },
+  {
+    path:'update',
+    component:UpdateRequestComponent,
+    pathMatch:"full"
+  },
   {
     path:"user-dashboard",
     component:UserDashboardComponent,
     canActivate: [UserGuard],
     children:[
-
       {
         path:'',
         component: welcomeComponent,
@@ -158,73 +234,18 @@ const routes: Routes = [
       {
         path:'room',
         component:RoomComponent,
-      }
-
+      },
+      
     ]
-
-
   },
-
     {
       path:"admin-dashboard",
       component:DashboardComponent,
       canActivate: [AdminGuard],
-
     children: [
     {
         path:'set-laundry-prices',
         component:SetLaundryPricesComponent
-      },
-      {
-        path:'pending-admin-request',
-        component:PendingAdminRequestComponent
-      },
-      {
-        path:'accepted-admin-request',
-        component:AcceptedAdminRequestComponent
-      },
-      {
-        path:'rejected-admin-request',
-        component:RejectedAdminRequestComponent
-      },
-      {
-        path:'completed-admin-request',
-        component:CompletedAdminRequestComponent
-      },
-      {
-        path:'update-admin',
-        component:UpdateAdminRequestComponent
-      },
-    ]
-  },
-  {
-    path:"user-dashboard",
-    component:UserDashboardComponent,
-    canActivate: [UserGuard],
-    children:[
-      {
-        path:'new-request',
-        component:NewRequestComponent,
-      },
-      {
-        path:'pending-request',
-        component:PendingRequestComponent
-      },
-      {
-        path:'accepted-request',
-        component:AcceptedRequestComponent
-      },
-      {
-        path:'rejected-request',
-        component:RejectedRequestComponent
-      },
-      {
-        path:'completed-request',
-        component:CompletedRequestComponent
-      },
-      {
-        path:'update',
-        component:UpdateRequestComponent
       },
       {
         path: '',
@@ -234,7 +255,6 @@ const routes: Routes = [
         path: 'welcome',
         component: WelcomeComponent,
       },
-
       {
         path: 'add-student',
         component: AddStudentComponent,
@@ -251,7 +271,6 @@ const routes: Routes = [
         path:'view-all-student',
         component:ViewAllStudentComponent,
       },
-
         {
           path:'rooms',
           component:RoomsComponent,
@@ -289,10 +308,8 @@ const routes: Routes = [
               path:'isoccupied',
               component:IsoccupiedComponent,
             },
-
           ]
         },
-
       {
         path:'fees',
         component:FeesComponent,
@@ -302,12 +319,10 @@ const routes: Routes = [
             path:'viewfees',
             component:ViewfeesComponent,
           },
-
           {
             path:'setfees',
             component:SetfeesComponent,
           },
-
           {
             path:'updatefees',
             component:UpdatefeesComponent,
@@ -315,16 +330,11 @@ const routes: Routes = [
           {
             path:'calculatefees',
             component:CalculatefeesComponent,
-
           }
         ]
-
-
       }
-
     ]
-  }
-
+  },
 ];
 
 @NgModule({
