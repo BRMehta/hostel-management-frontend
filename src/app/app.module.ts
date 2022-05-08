@@ -81,6 +81,10 @@ import { AddeqformComponent } from './pages/addeqform/addeqform.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { SportequpdateComponent } from './pages/sportequpdate/sportequpdate.component';
 import { ReqgranttabComponent } from './pages/reqgranttab/reqgranttab.component';
+import { LaundryhomeComponent } from './pages/admin/laundryhome/laundryhome.component';
+import { StudentinfoComponent } from './pages/admin/studentinfo/studentinfo.component';
+import { LaundryUserHomeComponent } from './pages/user/laundry/laundry-user-home/laundry-user-home.component';
+import { SportsUserHomeComponent } from './pages/user/sports-user-home/sports-user-home.component';
 
 @NgModule({
   declarations: [
@@ -142,7 +146,11 @@ import { ReqgranttabComponent } from './pages/reqgranttab/reqgranttab.component'
     SportadashboardComponent,
     AddeqformComponent,
     SportequpdateComponent,
-    ReqgranttabComponent
+    ReqgranttabComponent,
+    LaundryhomeComponent,
+    StudentinfoComponent,
+    LaundryUserHomeComponent,
+    SportsUserHomeComponent
   ],
   imports: [
     BrowserModule,

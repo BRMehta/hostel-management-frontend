@@ -1,14 +1,22 @@
 <mat-nav-list *ngIf="role=='admin'">
-  <a mat-list-item routerLink="/sportshome" routerLinkActive="list-item-active">
+  <a mat-list-item routerLink="/admin-dashboard" routerLinkActive="list-item-active">
     <mat-icon>home</mat-icon> Home
   </a>
 
-  <a mat-list-item routerLink="/sportadashboard" routerLinkActive="list-item-active">
-    <mat-icon>work</mat-icon> Admin Dashboard
+  <a mat-list-item routerLink="/sportshome" routerLinkActive="list-item-active">
+    <mat-icon> directions_run</mat-icon> Sports Home
   </a>
 
-  <a mat-list-item routerLink="/sportgrant" routerLinkActive="list-item-active">
-    <mat-icon>flight_land</mat-icon> Requests
+  <a mat-list-item routerLink="/laundryhome" routerLinkActive="list-item-active">
+    <mat-icon> local_laundry_service</mat-icon> Laundry Home
+  </a>
+
+  <a mat-list-item routerLink="/studentinfo" routerLinkActive="list-item-active">
+    <mat-icon>person</mat-icon> Student Management
+  </a>
+
+  <a mat-list-item routerLink="" routerLinkActive="list-item-active">
+    <mat-icon>payment</mat-icon> Billing
   </a>
 
   <a mat-list-item> <mat-icon>edit</mat-icon> Link 6 </a>
@@ -18,10 +26,10 @@
 <mat-nav-list *ngIf="role=='user'">
 
   <h2 matSubheader class="mt-2">APPLICATIONS</h2>
-  <a mat-list-item routerLink="/sportshome" routerLinkActive="list-item-active">
+  <a mat-list-item routerLink="/user-dashboard" routerLinkActive="list-item-active">
     <mat-icon>home</mat-icon> Home
   </a>
-  <a mat-list-item routerLink="/sportudash" routerLinkActive="list-item-active">
+  <!-- <a mat-list-item routerLink="/sportudash" routerLinkActive="list-item-active">
     <mat-icon>dashboard</mat-icon> Dashboard
   </a>
   <a mat-list-item routerLink="/sportuform" routerLinkActive="list-item-active">
@@ -30,5 +38,21 @@
 
   <a mat-list-item routerLink="/reqgranttab" routerLinkActive="list-item-active">
     <mat-icon>edit</mat-icon> Request Status
+  </a> -->
+
+  <a mat-list-item routerLink="/sportsUserHome" routerLinkActive="list-item-active">
+    <mat-icon> directions_run</mat-icon> Sports Home
+  </a>
+
+  <a mat-list-item routerLink="/laundryUserHome" routerLinkActive="list-item-active">
+    <mat-icon> local_laundry_service</mat-icon> Laundry Home
+  </a>
+
+  <a mat-list-item routerLink="/studentinfo" routerLinkActive="list-item-active">
+    <mat-icon>person</mat-icon> Student Management
+  </a>
+
+  <a mat-list-item routerLink="/fees" routerLinkActive="list-item-active">
+    <mat-icon>payment</mat-icon> Billing
   </a>
 </mat-nav-list>

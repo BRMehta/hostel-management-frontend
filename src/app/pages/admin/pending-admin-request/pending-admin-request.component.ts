@@ -43,7 +43,7 @@ export class PendingAdminRequestComponent implements OnInit {
     this.pendingReqs$ = this.laundry.getPendingRequests();
   }
   updateLaundryReq(laundryReq:laundryRequest){
-    this.router.navigate(['/admin-dashboard/update-admin'],{queryParams:{"data":laundryReq.id}});
+    this.router.navigate(['/update-admin'],{queryParams:{"data":laundryReq.id}});
   }
 
   acceptLaundryReqbyId(ReqId: number){
@@ -51,6 +51,7 @@ export class PendingAdminRequestComponent implements OnInit {
   }
 
   rejectLaundryReqbyId(id:number){
+    this.rejectReq.reason="Rejected by Admin";
     this.laundry.rejectLaundryReqbyId(id,this.rejectReq.reason);
 }
 

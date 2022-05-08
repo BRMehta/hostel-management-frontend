@@ -1,17 +1,79 @@
+<h1 class="text-center"> Admin Dashboard</h1>
 
-  
+
 <div class="bootstrap-wrapper">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-4">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <mat-card class="outer_card">
+          <h2 class="text-center"> Features</h2>
+          <!-- <div class="col-md-4">
           <app-sidebar></app-sidebar>
-        </div>
-  
-        <div class="col-md-8">
+        </div> -->
+          <div class="column">
+            <mat-card class="example-card" routerLink = "/sportshome">
+              <mat-card-header routerLink = "/sportshome">
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Sports</mat-card-title>
+                <mat-card-subtitle>Module</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="../../../assets/sports_logo.jpg"
+                alt="Sports logo">
+              <mat-card-actions>
+                <button class="ml10" mat-raised-button>GO</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div class="column">
+            <mat-card class="example-card" routerLink="/laundryhome">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Laundry</mat-card-title>
+                <mat-card-subtitle>Module</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="../../../assets/laundry_logo.jpg"
+                alt="Photo of a Shiba Inu">
+              <mat-card-actions>
+                <button class="ml10" mat-raised-button>GO</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div class="column">
+            <mat-card class="example-card" routerLink="">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Billing</mat-card-title>
+                <mat-card-subtitle>Module</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                alt="Photo of a Shiba Inu">
+              <mat-card-actions>
+                <button class="ml10" mat-raised-button>GO</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+          <div class="column">
+            <mat-card class="example-card" routerLink="/studentinfo">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>Student_Info</mat-card-title>
+                <mat-card-subtitle>Module</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                alt="Photo of a Shiba Inu">
+              <mat-card-actions>
+                <button class="ml10" mat-raised-button>GO</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+
+
+          <!-- <div class="col-md-8">
           <router-outlet></router-outlet>
-        </div>
-        
-  
+        </div> -->
+
+        </mat-card>
       </div>
     </div>
   </div>
+</div>

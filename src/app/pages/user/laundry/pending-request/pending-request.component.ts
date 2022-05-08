@@ -42,7 +42,7 @@ export class PendingRequestComponent implements OnInit {
   }
 
   updateLaundryReq(laundryReq:laundryRequest){
-    this.router.navigate(['/user-dashboard/update'],{queryParams:{"data":laundryReq.id}});
+    this.router.navigate(['/update'],{queryParams:{"data":laundryReq.id}});
   }
 
   removeLaundryReq(ReqId: number) {

@@ -2,12 +2,12 @@
     <table>
       <thead>
       <tr>
-        <th>ID</th>
-        <th>StudentId</th>
-        <th>requestTime</th>
-        <th>weightOfCloths</th>
-        <th>clothsDry</th>
-        <th>numberOfIronedCloths</th>
+        <th>ReqID</th>
+        <th>Id</th>
+        <th>Time</th>
+        <th>Weight</th>
+        <th>Dry?</th>
+        <th>Cloth'sIroned</th>
         <th>Action</th>
       </tr>
       </thead>
@@ -23,7 +23,6 @@
             <button mat-raised-button (click)="updateLaundryReq(laundryReq)" class="mr10" color='primary'>Update</button>
             <button mat-raised-button (click)="removeLaundryReq(laundryReq.id)" class="mr10" color='primary'>Remove</button>
             <button mat-raised-button (click)="acceptLaundryReqbyId(laundryReq.id)" class="mr10" color='primary'>Accept</button>
-            <input [(ngModel)]="rejectReq.reason" type="text" placeholder="Enter Rejection Reason"/>
             <button mat-raised-button (click)="rejectLaundryReqbyId(laundryReq.id)" class="ml10" color='primary'>Reject</button>
         </td>
       </tr>
