@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import baseUrl from './helper';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EmailService {
 
-  private baseUrl:string="http://localhost:8080"
   constructor(private http:HttpClient) { }
   sendEmail(data:any)
   {
-      return this.http.post(`${this.baseUrl}/sendemail`,data)
+      return this.http.post(`${baseUrl}/sendemail`,data)
   }
 }
