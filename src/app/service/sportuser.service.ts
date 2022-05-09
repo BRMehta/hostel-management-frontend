@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
+import {HttpClient, HttpHeaders} from "@angular/common/http";
 import baseUrl from "./helper";
+import { LoginService } from './login.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class SportuserService {
 
-  constructor(private http:HttpClient) {
+  constructor(private http:HttpClient,private login:LoginService) {
   }
 
   public viewSportlist()
@@ -53,7 +54,9 @@ export class SportuserService {
 
   public updateEquipq(eid:any , sportc: any)
   {
-    return this.http.put(`${baseUrl}/ap1/v1/Sports_e/qp/${eid}`, sportc)
+    const headers = new HttpHeaders().set('Authorization','Bearer '+this.login.getToken())
+    console.log(headers);
+    return this.http.put(`${baseUrl}/ap1/v1/Sports_e/up/${eid}`, sportc,{headers})
   }
 
 }
