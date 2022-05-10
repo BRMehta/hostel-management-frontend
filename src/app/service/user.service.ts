@@ -53,9 +53,9 @@ export class UserService
   }
 
 
-  public updatefees(feesmonth:any)
+  public updatefees(hostelfee:number,messfee:number)
   {
-    return this.http.put(`${baseUrl}/user/updatefees`,feesmonth)
+    return this.http.put(`${baseUrl}/user/updatefees/${hostelfee}/${messfee}`,{})
   }
 
   public calculate (id:number)

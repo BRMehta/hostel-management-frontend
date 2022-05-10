@@ -13,8 +13,8 @@ export class UpdatefeesComponent implements OnInit
 
   data=
   {
-    hostelfee:"",
-    messfee:"",
+    hostelfee:0,
+    messfee:0,
   }
 
 
@@ -27,18 +27,15 @@ export class UpdatefeesComponent implements OnInit
 
   doSubmitForm()
   {
-    this.student.updatefees(this.data).subscribe(
+    console.log(this.data);
+    this.student.updatefees(this.data.hostelfee,this.data.messfee).subscribe(
     (response:any)=>
     {
-
-
       this.data = response;
       Swal.fire('Success', 'Fees  is Set', 'success');
-
-    },
+  },
     (error:any) => 
     {
-     
       Swal.fire('Error!! ', 'Error while Setting  Fees ', 'error');
       console.log(error);
     }
