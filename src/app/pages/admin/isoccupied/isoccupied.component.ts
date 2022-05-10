@@ -31,7 +31,7 @@ export class IsoccupiedComponent implements OnInit {
     {
       this.data.x=response;
       if(this.data.x)
-      this.res="Not Available"
+      this.res="Available"
     
       Swal.fire('Success !!',this.res, 'success');
 
