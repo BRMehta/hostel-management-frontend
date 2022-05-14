@@ -1,27 +1,30 @@
-# HostelFrontend
+# hostel-management-frontend
+ 
+ Hostel Management System is a web – application portal to manage various activities
+and departments related to hostel domain and helps hostel administration to manage 
+student data, allocate rooms, manage sport equipments, laundry management, billing 
+and monitoring of student activities, etc. Along with these, it also provides 
+functionalities to students for issuing sports equipments, managing their laundry 
+cycles, regulating their bills and much more.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+This application acts as a bridge between hostel administration and students. It helps 
+to manage the daily activities of hostel life and makes the process easy both for the 
+students and the administration.
 
-## Development server
+The Project mainly consists of four main modules, namely – Student Information 
+module, Sports Equipment management module, Laundry Management module and 
+Billing module.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The project is implemented using 3 layers: 
+1. Front end 
+2. Database Layer 
+3. Back end 
 
-## Code scaffolding
+The Frontend is implemented using Angular, Bootstrap. 
+Spring Boot framework is used for the backend.
+The database layer is handled by MySQL database.
+The connection between backend and Database uses JPA persistence framework.
+Authentication is implemented using JWT.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Github Repo for Backend:
+https://github.com/BRMehta/-hostel-management-system
